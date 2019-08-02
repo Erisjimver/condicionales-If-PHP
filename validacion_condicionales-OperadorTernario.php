@@ -29,7 +29,8 @@
 
 	if(isset($_POST["enviando"])){
 
-		$edad=$_POST["edad_usuario"];
+		$contra=$_POST["contra"];
+		$nombre=$_POST["nombre_usuario"];
 
 /*
 		if($edad<=18){
@@ -42,5 +43,12 @@
 	}
 */	
 
-	echo $edad<18 ? "Eres menor de edad. No puedes acceder" : "Eres mayor de edad. Puedes acceder";
+/*
+	$resultado = $edad<18 ? "Eres menor de edad. No puedes acceder" : "Eres mayor de edad. Puedes acceder";
+	echo $resultado;
+
+*/
+	$resultado= $nombre == "Israel" && $contra == "12345" ? "Puedes acceder" : "Datos incorrectos";
+	echo $resultado;
+}
 ?>
